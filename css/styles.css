@@ -46,9 +46,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 25px 0;
   text-align: center;
   text-transform: uppercase;
+	width: 100%;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -144,11 +145,12 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin: 15px auto;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
   /* width: 270px; */
+	max-width: 365px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -245,6 +247,7 @@ nav h1 a {
   padding: 30px;
   /* width: 100%; */
 	text-align: center;
+	max-width: 429px;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -269,7 +272,7 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  /* width: 85%; */
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -285,10 +288,42 @@ nav h1 a {
 
 /* ====================== Media Queries ====================== */
 
-/* Smart phone test */
-@media screen and (max-width: 480px) {
+/* Tablet test */
+@media screen and (min-width: 396px) and (max-width: 768px) {
+	nav {
+	  width: 100%;
+	  height: 80px;
+	  background-color: #f48843;
+	}
 	h1 {
-		/* font-size: 10%; */
-		/* padding: 0; */
-	  /* margin: 0 auto; */
+		padding-top: 20px;
+	}
+}
+
+@media screen and (min-width: 985px) {
+	/*flex test here*/
+
+	.inside #map-container {
+		background: none repeat scroll 0 0;
+		height: 85%;
+		position: fixed;
+		right: 0;
+		width: 52%;
+	}
+
+	.inside #map {
+		height: 100%;
+		width: 100%;
+		/* margin-top: 51px; */
+	}
+
+	#restaurant-container, #reviews-container {
+	  border-bottom: 1px solid #d9d9d9;
+	  border-top: 1px solid #fff;
+	  padding: 30px;
+	  /* width: 100%; */
+		text-align: center;
+		max-width: 429px;
+		width: 48%;
+	}
 }
