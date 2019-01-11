@@ -6,7 +6,6 @@ body,td,th,p{
 	/* font-size: 10pt; */
 	color: #333;
 	line-height: 1.5;
-
 }
 body {
 	background-color: #fdfdfd;
@@ -100,6 +99,15 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
+/* ARIA: Change color for breadcrumb focus links */
+#breadcrumb li a:focus {
+		color: #fff;
+    background-color: #252831;
+    text-decoration: none;
+		padding: 2px;
+}
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -188,6 +196,11 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+/* ARIA: Changes hover and focus b-color for restaurant links */
+#restaurants-list li a:hover, #restaurants-list li a:focus {
+	background-color: #111e90;
 }
 
 /* ====================== Restaurant Details ====================== */
