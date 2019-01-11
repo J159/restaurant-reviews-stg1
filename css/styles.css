@@ -303,15 +303,32 @@ nav h1 a {
 	margin: 0 auto;
 }
 
+/* ====================== Skip-Map ====================== */
+
+.skip-map {
+	display: block;
+	position: absolute;
+	top: 13px;
+	left: -1000px;
+	padding: 15px;
+	color: #000;
+	background-color: #fff;
+}
+
+.skip-map:focus {
+	left: 13px;
+}
+
 /* ====================== Media Queries ====================== */
 
-/* Tablet test */
+/* Tablet */
 @media screen and (min-width: 396px) {
 	header h1 {
 		padding-top: 20px;
 	}
 }
 
+/* Laptop and above */
 @media screen and (min-width: 985px) {
 	/*flex test here*/
 
