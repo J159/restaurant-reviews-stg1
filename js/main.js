@@ -202,19 +202,16 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
 
-/* Service Worker registration */
+/**
+ * Service Worker
+ */
 
+// If serviceWorker is supported by browser, reigster serviceWorker ('/sw.js'). Else, console log error message.
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log("Service Worker registered!!");
+  }).catch(function(err) {
+    console.log("WARNING: Service Worker registration failed!", err);
+  });
 }
