@@ -204,10 +204,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 }
 
 /**
- * Service Worker
+ * Register Service Worker
  */
 
-// If serviceWorker is supported by browser, reigster serviceWorker ('/sw.js'). Else, console log error message.
+// If serviceWorker is supported by the browser, reigster serviceWorker ('/sw.js'). Else, console log error message.
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
     console.log("Service Worker registered!!");
