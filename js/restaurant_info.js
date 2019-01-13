@@ -193,3 +193,16 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+/**
+ * Register Service Worker
+ */
+
+// If serviceWorker is supported by the browser, reigster serviceWorker ('/sw.js'). Else, console log error message.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log("Service Worker registered!!");
+  }).catch(function(err) {
+    console.log("WARNING: Service Worker registration failed!", err);
+  });
+}
