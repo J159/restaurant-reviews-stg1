@@ -4,7 +4,7 @@ const cacheVer = 'cache-v1';
 const cacheTest = [
   '/',
   'index.html',
-  'restaurant.html'
+  'restaurant.html',
   '/css/styles.css',
   '/js/dbhelper.js',
   '/js/main.js',
